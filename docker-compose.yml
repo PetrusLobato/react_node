@@ -6,6 +6,6 @@ services:
     ports:
       - '5432:5432'
     environment:
-      - POSTGRES_USER=PostgresSQL
+      - POSTGRES_USER=postgres
       - POSTGRES_PASSWORD=b12p23p07
       - POSTGRES_DB=Project_test
