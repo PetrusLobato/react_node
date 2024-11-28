@@ -1,10 +1,19 @@
 import fastify from 'fastify'
 import { createTask } from '../functions/task/create'
 import z from 'zod'
-import { title } from 'process'
+import { weekPendingTask } from '../functions/task/week_pending'
+
 
 
 const app = fastify()
+
+
+app.get('/pending-task', async () => {
+
+  const {getTaskPeding} = await weekPendingTask()
+
+  return getTaskPeding
+})
 
 
 
